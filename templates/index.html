@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        
+        <!-- Bootstrap CSS -->
+        <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+        <title>home</title>
+    </head>
+    <body>
+        <nav style="width: 100%;" class="navbar navbar-dark bg-dark">
+            <a class="  navbar-brand" href="#" style="margin-left: 25px;">
+                Python flask webapp with sqlite3 Projects...
+            </a>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
+        
+                    <img src="{{ url_for('static',filename = 'image/bg-right.png')  }}" class="img-fluid"
+                        style="width: auto; height: auto; min-width: 430px;min-height: 600px;">
+        
+                </div>
+        
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 " style=" padding: 30px;">
+                    <br>
+                    <h2>Hola 👋, Welcome to the website...</h2>
+                    <br><br>
+                    <p style="font-size:22px;">Flask allows us to use the SQLite3 which is one of the python modules. It is used for creating database web
+                    applications. To understand this, we will be going to create a CRUD application.</p>
+                    <br>
+                    <p style="font-size:22px;">Here we will manage the student information in the SQLite using the flask script, and admin can interact with it. This
+                    database named student.db contains related tables, and these tables contain information about the students</p>
+                    <br>
+                    <a href="/add"><button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="click me to add student details &#128515;">Add Student Record &#10145;</button></a>
+                    <a href="/view"><button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="click me to view students record &#128515;">View Students Record &#10145;</button></a>
+                    <a href="/delete"><button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="click me to delete Student record &#128515;">Delete Student Record &#10145;</button></a>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed-bottom ">
+            <div class="bg-dark " style="min-height: 40px;">
+        
+                <marquee style="color:#fff; margin-top: 7px;">
+                    <h9>Copyright@ Pritesh Kumar</h9>
+                </marquee>
+            </div>
+        </div>
+        <!-- change later-->
+        <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+    </body>
+</html>

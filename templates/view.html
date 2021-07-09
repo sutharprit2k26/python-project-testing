@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+    <title>list</title>
+</head>
+
+<body>
+    <nav style="width: 100%;" class="navbar navbar-dark bg-dark">
+        <a class="  navbar-brand" href="#" style="margin-left: 25px;">
+            Python flask webapp with sqlite3 Projects...
+        </a>
+    </nav>
+    <h3>Student Information</h3>
+    <table border=5>
+        <thead>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Address</td>
+        </thead>
+        {% for row in rows %}
+        <tr>
+            <td>{{row["id"]}}</td>
+            <td>{{row["name"]}}</td>
+            <td>{{row["email"]}}</td>
+            <td>{{row["address"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a href="/">Go back to home page</a>
+<div class="fixed-bottom ">
+    <div class="bg-dark " style="min-height: 40px;">
+
+        <marquee style="color:#fff; margin-top: 7px;">
+            <h9>Copyright@ Pritesh Kumar</h9>
+        </marquee>
+    </div>
+</div>
+<!-- change later-->
+<script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+</body>
+
+</html>
